@@ -52,7 +52,7 @@ export default class Application extends EventEmitter {
     this.emit(Application.events.READY);
   }
 
-  async _load() {
+   async _load() {
     return await fetch(this.apiUrl).then((response) => {
       return response.json();
     });
@@ -112,4 +112,5 @@ _render({ name, terrain, population }) {
         </div>
       </article>
       `;
+}
 }
